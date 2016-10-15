@@ -17,7 +17,8 @@ def in_to_out(text):
 	res = extract(text)
 	file = open(text,"r")
 	for a in file:
-		for i in range(1,len(a.split("\n")[0].split(" "))):#for i in range(1,len(a.split("\n")[0].split(" "))-1):
+		# for i in range(1,len(a.split("\n")[0].split(" "))):
+		for i in range(1,len(a.split("\n")[0].split(" "))-1):
 			res[ind(res,a.split("\n")[0].split(" ")[i])].append(a.split("\n")[0].split(" ")[0])
 	return res
 def in_out_tran(text,outp):
@@ -28,6 +29,6 @@ def in_out_tran(text,outp):
 			sed.write(item+" ")
 		sed.write("\n")
 	sed.close()
-text = "test.txt"
-outp = "out_test.txt"
+text = "in_link.txt"
+outp = "pro_out_link.txt"
 in_out_tran(text,outp)

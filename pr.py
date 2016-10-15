@@ -70,7 +70,7 @@ d = pr(in_1000,out_1000)
 # d = pr(in_link,out_link)
 dict1 = sorted(d.iteritems(),key=lambda d:d[1],reverse = True)
 for item in dict1:
-	print item#,dict1[item]
+	print item
 
 
 
